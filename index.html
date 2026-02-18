@@ -9,14 +9,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <!-- FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#020617;
-  --glass:rgba(255,255,255,.10);
-  --border:rgba(255,255,255,.25);
-  --blur:blur(20px);
+  --glass: rgba(255,255,255,.55);
+  --border: rgba(255,255,255,.85);
+  --blur: blur(22px);
 }
 
 *{box-sizing:border-box}
@@ -26,13 +25,13 @@ body{
   min-height:100vh;
   font-family:'Inter',sans-serif;
   background:
-    radial-gradient(circle at 15% 20%, #38bdf855, transparent 40%),
-    radial-gradient(circle at 85% 80%, #22d3ee55, transparent 40%),
-    linear-gradient(160deg,#020617,#020617);
-  color:#fff;
+    radial-gradient(circle at 15% 20%, #60a5fa55, transparent 40%),
+    radial-gradient(circle at 85% 80%, #34d39955, transparent 40%),
+    linear-gradient(135deg,#e0f2fe,#f0fdf4);
   display:flex;
   justify-content:center;
-  padding:32px 16px;
+  padding:28px 16px;
+  color:#0f172a;
 }
 
 /* WRAPPER */
@@ -41,75 +40,61 @@ body{
   max-width:1250px;
 }
 
-/* TOP BAR */
-.topbar{
+/* HEADER */
+.header{
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  margin-bottom:40px;
+  gap:16px;
+  margin-bottom:45px;
 }
 
-.brand{
-  display:flex;
-  gap:14px;
-  align-items:center;
+.header i{
+  font-size:42px;
+  color:#2563eb;
 }
 
-.brand i{
-  font-size:34px;
-  color:#38bdf8;
-}
-
-.brand h1{
-  font-size:1.9em;
+.header h1{
   margin:0;
+  font-size:2.2em;
   font-weight:800;
 }
 
-.brand span{
-  font-size:.85em;
-  opacity:.7;
+.header p{
+  margin:4px 0 0;
+  font-size:.95em;
+  opacity:.75;
 }
 
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:26px;
 }
 
 /* CARD */
 .card{
   position:relative;
-  padding:30px 24px;
-  border-radius:22px;
+  padding:32px 26px;
+  border-radius:24px;
   background:var(--glass);
   backdrop-filter:var(--blur);
   border:1px solid var(--border);
   text-decoration:none;
-  color:#fff;
+  color:#0f172a;
   transition:.45s cubic-bezier(.2,.8,.2,1);
-  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.08);
 }
 
-/* GLOW */
-.card::before{
-  content:'';
-  position:absolute;
-  inset:-1px;
-  border-radius:22px;
-  background:linear-gradient(120deg,transparent,var(--accent),transparent);
-  opacity:.15;
-}
-
+/* HOVER */
 .card:hover{
-  transform:translateY(-10px) scale(1.03);
-  box-shadow:0 35px 70px rgba(0,0,0,.5);
+  transform:translateY(-10px) scale(1.04);
+  box-shadow:0 35px 70px rgba(0,0,0,.15);
 }
 
 /* ICON */
 .card i{
-  font-size:42px;
+  font-size:44px;
   margin-bottom:18px;
   color:var(--accent);
 }
@@ -117,31 +102,32 @@ body{
 /* TITLE */
 .card h3{
   margin:0;
-  font-size:1.15em;
-  font-weight:600;
+  font-size:1.1em;
+  font-weight:700;
 }
 
-/* VARIANT */
-.db{--accent:#38bdf8}
-.anjab{--accent:#f472b6}
-.daftar{--accent:#facc15}
-.app{--accent:#4ade80}
-.admin{--accent:#22d3ee}
-.starship{--accent:#fb7185}
-.jobs{--accent:#a78bfa}
-.dashboard{--accent:#10b981}
+/* VARIANT COLOR */
+.db{--accent:#2563eb}
+.anjab{--accent:#db2777}
+.daftar{--accent:#ca8a04}
+.app{--accent:#16a34a}
+.admin{--accent:#0891b2}
+.starship{--accent:#e11d48}
+.jobs{--accent:#7c3aed}
+.dashboard{--accent:#059669}
+.eactivity{--accent:#0ea5e9}
 
 /* FOOTER */
 .footer{
-  margin-top:50px;
+  margin-top:55px;
   text-align:center;
   font-size:.85em;
-  opacity:.6;
+  opacity:.7;
 }
 
 /* MOBILE */
 @media(max-width:600px){
-  .brand h1{font-size:1.5em}
+  .header h1{font-size:1.6em}
 }
 </style>
 </head>
@@ -149,13 +135,11 @@ body{
 <body>
 <div class="wrapper">
 
-  <div class="topbar">
-    <div class="brand">
-      <i class="fas fa-layer-group"></i>
-      <div>
-        <h1>ASDMA WORKSPACE</h1>
-        <span>Unified Digital Control System</span>
-      </div>
+  <div class="header">
+    <i class="fas fa-building-columns"></i>
+    <div>
+      <h1>ASDMA WORKSPACE</h1>
+      <p>Portal Digital Manajemen Aparatur</p>
     </div>
   </div>
 
@@ -199,6 +183,12 @@ body{
     <a href="https://rikoantah.github.io/Dasboard-Kepegawaian/" target="_blank" class="card dashboard">
       <i class="fas fa-chart-line"></i>
       <h3>Dashboard Kepegawaian</h3>
+    </a>
+
+    <!-- TOMBOL BARU -->
+    <a href="http://epresensi.kalbarprov.go.id" target="_blank" class="card eactivity">
+      <i class="fas fa-calendar-check"></i>
+      <h3>E-Activity</h3>
     </a>
 
   </div>

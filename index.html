@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>ASDMA WORKSPACE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#020617;
+  --glass:rgba(255,255,255,.10);
+  --border:rgba(255,255,255,.25);
+  --blur:blur(20px);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:'Inter',sans-serif;
+  background:
+    radial-gradient(circle at 15% 20%, #38bdf855, transparent 40%),
+    radial-gradient(circle at 85% 80%, #22d3ee55, transparent 40%),
+    linear-gradient(160deg,#020617,#020617);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  padding:32px 16px;
+}
+
+/* WRAPPER */
+.wrapper{
+  width:100%;
+  max-width:1250px;
+}
+
+/* TOP BAR */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
+}
+
+.brand{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+
+.brand i{
+  font-size:34px;
+  color:#38bdf8;
+}
+
+.brand h1{
+  font-size:1.9em;
+  margin:0;
+  font-weight:800;
+}
+
+.brand span{
+  font-size:.85em;
+  opacity:.7;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:26px;
+}
+
+/* CARD */
+.card{
+  position:relative;
+  padding:30px 24px;
+  border-radius:22px;
+  background:var(--glass);
+  backdrop-filter:var(--blur);
+  border:1px solid var(--border);
+  text-decoration:none;
+  color:#fff;
+  transition:.45s cubic-bezier(.2,.8,.2,1);
+  overflow:hidden;
+}
+
+/* GLOW */
+.card::before{
+  content:'';
+  position:absolute;
+  inset:-1px;
+  border-radius:22px;
+  background:linear-gradient(120deg,transparent,var(--accent),transparent);
+  opacity:.15;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 35px 70px rgba(0,0,0,.5);
+}
+
+/* ICON */
+.card i{
+  font-size:42px;
+  margin-bottom:18px;
+  color:var(--accent);
+}
+
+/* TITLE */
+.card h3{
+  margin:0;
+  font-size:1.15em;
+  font-weight:600;
+}
+
+/* VARIANT */
+.db{--accent:#38bdf8}
+.anjab{--accent:#f472b6}
+.daftar{--accent:#facc15}
+.app{--accent:#4ade80}
+.admin{--accent:#22d3ee}
+.starship{--accent:#fb7185}
+.jobs{--accent:#a78bfa}
+.dashboard{--accent:#10b981}
+
+/* FOOTER */
+.footer{
+  margin-top:50px;
+  text-align:center;
+  font-size:.85em;
+  opacity:.6;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .brand h1{font-size:1.5em}
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <div class="brand">
+      <i class="fas fa-layer-group"></i>
+      <div>
+        <h1>ASDMA WORKSPACE</h1>
+        <span>Unified Digital Control System</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <a href="https://docs.google.com/spreadsheets/d/1o42Q2Ew649AZ-5CTy5kaBZyybRHN8gbnRGbEV0dtfzs/edit" target="_blank" class="card db">
+      <i class="fas fa-database"></i>
+      <h3>Database</h3>
+    </a>
+
+    <a href="https://script.google.com/macros/s/AKfycbzTQxBX0CoHkHSdjRTKvgYNP8TrKvAZaWFDykJRi6x1pFzBryuBAVOBSH2-t2J3YVqb/exec" target="_blank" class="card anjab">
+      <i class="fas fa-users-gear"></i>
+      <h3>Anjab & ABK</h3>
+    </a>
+
+    <a href="https://script.google.com/macros/s/AKfycbxOO_hNwkgYkPAbKIiANodH6CT1R0rx6Ebweu5C6ExOwpdE02druCPHOpwsSNG0IMsu/exec" target="_blank" class="card daftar">
+      <i class="fas fa-list-check"></i>
+      <h3>Daftar Pekerjaan</h3>
+    </a>
+
+    <a href="https://script.google.com/macros/s/AKfycbywE0vgQNH0x_ytNP6MmIkEKF4USwl0WS0CLnvFjdgK52GezSTiTvkTWJM6-SpAvNJ0jA/exec" target="_blank" class="card app">
+      <i class="fas fa-briefcase"></i>
+      <h3>Aplikasi Kepegawaian</h3>
+    </a>
+
+    <a href="https://script.google.com/macros/s/AKfycbxNeBJxuHMgyo0agpwx8TmMT5JwovASPrtG9Q8VrlffvZ6JrC05YgdkW7DtB-R9J_z4/exec" target="_blank" class="card admin">
+      <i class="fas fa-screwdriver-wrench"></i>
+      <h3>Aneka Admin</h3>
+    </a>
+
+    <a href="https://script.google.com/macros/s/AKfycbw7UwgamSpUsRNJwB_1eS6_7LRcOlGMh7jZDKoOqw89LAJaly0aGiFNV13F7lhtNR91/exec" target="_blank" class="card starship">
+      <i class="fas fa-rocket"></i>
+      <h3>STARSHIP</h3>
+    </a>
+
+    <a href="https://rikoantah.github.io/Imput-Arsip-RSDS/" target="_blank" class="card jobs">
+      <i class="fas fa-folder-open"></i>
+      <h3>Masukan Arsip</h3>
+    </a>
+
+    <a href="https://rikoantah.github.io/Dasboard-Kepegawaian/" target="_blank" class="card dashboard">
+      <i class="fas fa-chart-line"></i>
+      <h3>Dashboard Kepegawaian</h3>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    © ASDMA Digital Workspace
+  </div>
+
+</div>
+</body>
+</html>
